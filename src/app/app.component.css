@@ -1,0 +1,51 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+header p {
+    width: 100%;
+}
+
+header {
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.drawer-container {
+    padding-top: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+    z-index: 10;
+}
+
+.drawer-menu, .drawer-menu-list {
+    margin-top: 80px;
+}
+
+.drawer-search {
+    display: none;
+}
+
+@media screen and (max-width: 400px) {
+    .drawer-search {
+        display: block;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-bottom: 16px;
+    }
+
+    .drawer-menu-list {
+        margin-top: 0px;
+    }
+
+    .search-icon {
+        display: none;
+    }
+}

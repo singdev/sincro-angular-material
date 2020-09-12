@@ -1,0 +1,58 @@
+main {
+    max-width: 100%;
+    min-height: 60px;
+    display: block;
+    background: transparent;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+}
+
+
+.example-box {
+    padding: 20px 10px;
+    border-bottom: solid 1px #ccc;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: move;
+    background: dodgerblue;
+    font-size: 14px;
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ripple:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(0, 0);
+    opacity: .2;
+    transition: 0s;
+}
+
+.ripple:active:before {
+    transform: scale(10, 10);
+    /* opacity: 0; */
+    transition: transform .3s, opacity 1s;
+}

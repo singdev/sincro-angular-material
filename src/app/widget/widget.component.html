@@ -1,0 +1,7 @@
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)" (cdkDropListDisabled)="disableDragDrop">
+    <div class="example-box ripple" *ngFor="let item of list" cdkDrag [cdkDragStartDelay]="300"
+        (cdkDragStarted)="onDragStart($event)" [cdkDragDisabled]="disableDragDrop" [longPress]="dragStarted === false"
+        (onLongPress)="onLongPress()">
+        {{item}}
+    </div>
+</div>
